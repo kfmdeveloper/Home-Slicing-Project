@@ -1,0 +1,60 @@
+.fa-compass {
+  color: rgb(107, 142, 39);
+  font-size: 2rem;
+}
+.navbar {
+  height: 5rem;
+  background-color: white;
+}
+
+.f-links a {
+  text-decoration: none;
+  color: #222222;
+}
+.f-socials {
+  font-size: 1.4rem;
+}
+.f-socials i {
+  margin-right: 1rem;
+}
+.f-links a:hover {
+  text-decoration: underline;
+}
+.f-info {
+  text-align: center;
+  background-color: rgb(217, 212, 222);
+  height: 6rem;
+  padding-top: 5px;
+}
+.card {
+  border: none !important;
+  margin-bottom: 2rem;
+  width: 100% !important;
+}
+.card-body {
+  padding: 0 !important;
+}
+.card-img-top {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 1rem !important;
+}
+.card-text {
+  font-weight: 500;
+  padding: 2px;
+  margin-top: 4px;
+}
+.card-img-overlay {
+  opacity: 0;
+}
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
+  transition: all;
+  transition-duration: 0.3s;
+}
+.myimg {
+  width: 30rem;
+  height: 20rem;
+}

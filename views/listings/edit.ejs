@@ -1,0 +1,78 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<body>
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <h2>Edit your listing</h2>
+      <form method="POST" action="/listings/<%= editedData._id %>?_method=PUT">
+        <div class="mb-lg-3">
+          <label class="form-label" for="title">Title</label>
+          <input
+            name="title"
+            type="text"
+            class="form-control"
+            value="<%= editedData.title  %>"
+          />
+        </div>
+        <div class="mb-lg-3">
+          <label class="form-label form-la" for="description"
+            >Description</label
+          >
+
+          <textarea name="description" class="form-control" cols="10" rows="4">
+<%= editedData.description %></textarea
+          >
+        </div>
+        <div class="mb-lg-3">
+          <label class="form-label" for="image">Image Link</label>
+
+          <input
+            type="text"
+            value="<%= editedData.image  %>"
+            name="image"
+            class="form-control"
+          />
+        </div>
+        <div class="row">
+          <div class="mb-lg-3 col-lg-4">
+            <label class="form-label" for="price">Price</label>
+            <input
+              class="form-control"
+              type="2200"
+              value="<%= editedData.price  %>"
+              name="price"
+            />
+          </div>
+          <div class="mb-lg-3 col-lg-8">
+            <label class="form-label" for="country">Country</label>
+            <input
+              class="form-control"
+              type="text"
+              value="<%= editedData.country  %>"
+              name="country"
+            />
+          </div>
+        </div>
+        <div class="mb-lg-3">
+          <label class="form-label" for="location">Location</label>
+          <input
+            type="text"
+            class="form-control"
+            value="<%= editedData.location  %>"
+            name="location"
+          />
+        </div>
+
+        <br />
+        <div class="row">
+          <a href="/listings" class="w-50 btn btn-primary mb-3 col-5 offset-3"
+            >Back</a
+          >
+
+          <button class="w-50 btn btn-danger mb-3 col-4 offset-3">
+            Edit Listing
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>

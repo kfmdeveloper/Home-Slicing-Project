@@ -1,0 +1,117 @@
+<% layout("/layouts/boilerplate.ejs") %>
+
+<body>
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <h2>Add new listing</h2>
+      <form
+        method="POST"
+        action="/listings"
+        class="m-lg-4 needs-validation"
+        novalidate
+      >
+        <div class="mb-lg-3">
+          <label class="form-label" for="title">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Khalid House"
+            name="title"
+            required
+          />
+          <div class="invalid-feedback">
+            <p>Please enter Title</p>
+          </div>
+          <div class="valid-feedback">
+            <p>Looks good!</p>
+          </div>
+        </div>
+
+        <div class="mb-lg-3">
+          <label class="form-label form-la" for="description"
+            >Description</label
+          >
+
+          <textarea
+            placeholder="What's Subsequence?"
+            name="description"
+            class="form-control"
+            cols="10"
+            rows="4"
+            required
+          ></textarea>
+          <div class="invalid-feedback">
+            <p>Discription is must!</p>
+          </div>
+        </div>
+        <div class="mb-lg-3">
+          <label class="form-label" for="image">Image Link</label>
+
+          <input
+            type="text"
+            placeholder="Enter image Url"
+            name="image"
+            class="form-control"
+          />
+        </div>
+        <div class="row">
+          <div class="mb-lg-3 col-lg-4">
+            <label class="form-label" for="price">Price</label>
+            <input
+              class="form-control"
+              type="2200"
+              placeholder="Enter price"
+              name="price"
+              required
+            />
+            <div class="invalid-feedback">
+              <p>Price should be Valid!</p>
+            </div>
+            <div class="valid-feedback">
+              <p>Looks better!</p>
+            </div>
+          </div>
+          <div class="mb-lg-3 col-lg-8">
+            <label class="form-label" for="country">Country</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Pakistan"
+              name="country"
+              required
+            />
+            <div class="invalid-feedback">
+              <p>Please enter your Country!</p>
+            </div>
+            <div class="valid-feedback">
+              <p>Country traced</p>
+            </div>
+          </div>
+        </div>
+        <div class="mb-lg-3">
+          <label class="form-label" for="location">Location</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="OKARA"
+            name="location"
+            required
+          />
+          <div class="invalid-feedback">
+            <p>Please enter location</p>
+          </div>
+          <div class="valid-feedback">
+            <p>location traced</p>
+          </div>
+        </div>
+
+        <br />
+        <div class="row">
+          <button class="w-50 btn btn-dark mb-3 col-4 offset-3">
+            Add Listing
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>

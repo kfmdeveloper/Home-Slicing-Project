@@ -1,0 +1,53 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<body>
+  <h2 class="text-center bg-body-secondary mb-5 p-2">
+    See your listing in detail
+  </h2>
+  <div class="row col-lg-9 mt-2 offset-3">
+    <div class="  ">
+      <img
+        class="myimg img-fluid"
+        src="<%= data.image  %>"
+        class="img-fluid"
+        alt="..."
+      />
+    </div>
+  </div>
+  <div class="row col-6 offset-3">
+    <div class="card text-center">
+      <h3 class="card-header col-9 offset-1"><%= data.title %></h3>
+      <div class="card-body">
+        <div class="row mb-2 mt-2">
+          <div class="col-6"><strong>Price</strong></div>
+          <div class="col-4">Rs:<%= data.price %></div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-6"><strong>Country</strong></div>
+          <div class="col-4"><%= data.country %></div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-6"><strong>Location</strong></div>
+          <div class="col-4"><%= data.location %></div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-6"><strong>Descripton</strong></div>
+        </div>
+        <div class="col-8 offset-2"><%= data.description %></div>
+      </div>
+    </div>
+    <div class="row col-9 offset-1">
+      <a href="/listings" class="btn mb-2 btn-outline-success w-100">Back</a>
+    </div>
+    <form method="POST" action="/listings/<%= data._id %>?_method=DELETE">
+      <div class="row col-9 offset-1">
+        <button class="btn mb-2 btn-danger w-100">Delete</button>
+      </div>
+    </form>
+    <br />
+    <form method="GET" action="/listings/<%= data._id %>/edit">
+      <div class="row col-9 offset-1">
+        <button class="btn mb-2 btn-primary w-100">Edit</button>
+      </div>
+    </form>
+  </div>
+</body>
